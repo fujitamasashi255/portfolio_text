@@ -1,0 +1,82 @@
+// Place all the styles related to the questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container {
+  display:flex;
+}
+  
+form {
+  flex:1 1 50%;
+}
+
+.preview_field {
+  margin:37px 0 0 30px;
+  flex:1 1 50%;
+}
+
+.preview_title {
+  margin:0;
+}
+
+.trix-editor {
+  padding: 0.8em;
+}
+
+.trix-content {
+    line-height: 2;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    padding: 0.8em;
+    height: 400px; /* 100vh */
+    outline: none;
+    overflow: scroll;
+}
+
+.question_content_show {
+    width:50%
+}
+
+pre {
+  width: auto;
+  height: auto;
+}
+
+/*
+#tikz_container {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  width: 50%;
+  margin:0;
+}
+*/
+
+#textarea {
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+#background_textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility:hidden;
+  overflow-wrap: break-word;
+}
+
+#background_textarea .visible {
+  background: rgba(255,0,0,0.2);
+  visibility:visible;
+}
+
+#background_textarea .hidden {
+  visibility:hidden;
+}
+*/

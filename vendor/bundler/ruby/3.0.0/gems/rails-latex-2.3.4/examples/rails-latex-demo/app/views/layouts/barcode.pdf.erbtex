@@ -1,0 +1,15 @@
+\documentclass{scrartcl}
+<% @latex_config = { :recipe => [
+	{:command => 'xelatex'},
+]} # you can override the defaults if you wish; see LatexToPdf#config
+%>
+
+\usepackage{pst-barcode}
+\usepackage{hyperref}
+
+\begin{document}
+
+<%= yield %>
+
+\end{document}
+

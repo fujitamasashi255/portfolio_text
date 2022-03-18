@@ -1,0 +1,1 @@
+LatexToPdf.config.merge! :command => "#{Rails.root}/lib/tasks/platex_dvipdfmx.sh"

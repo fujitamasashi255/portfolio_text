@@ -1,0 +1,9 @@
+<% if @e %>
+    <%# if @log_file_path && File.exists?(@log_file_path) %>
+        $('#compile_result').html('コンパイルできませんでした。ログファイル：<iframe src=<%= tex_log_question_path(@question) %> width="1200" height="600" ></iframe>');
+    <%# else %>
+    <%# end %>
+<% else %>
+    //$('#compile_result').html('<iframe src="<%= url_for(@question.tikz_pdf) %>" type="application/pdf" width="800" height="800" position="absolute" ></iframe>');
+    $('#compile_result').html('<%= image_tag url_for(@question.tikz_pdf) %>');
+<% end %>

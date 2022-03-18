@@ -1,0 +1,17 @@
+current directory: /Users/fujitamasashi/mysite/portfolio_test/vendor/bundler/ruby/3.0.0/gems/racc-1.6.0/ext/racc/cparse
+/Users/fujitamasashi/.rbenv/versions/3.0.0/bin/ruby -I /Users/fujitamasashi/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20220122-53490-obz1nl.rb extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/fujitamasashi/mysite/portfolio_test/vendor/bundler/ruby/3.0.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/fujitamasashi/mysite/portfolio_test/vendor/bundler/ruby/3.0.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/fujitamasashi/mysite/portfolio_test/vendor/bundler/ruby/3.0.0/gems/racc-1.6.0/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20220122-53490-flc7hz/racc

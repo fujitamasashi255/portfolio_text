@@ -1,0 +1,13 @@
+*.swp
+*.gem
+.bundle
+Gemfile.lock
+pkg/*
+tmp
+test/tmp
+rdoc
+*~
+examples/rails-latex-demo/log
+examples/rails-latex-demo/tmp
+*#*#
+.#*

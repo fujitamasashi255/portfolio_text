@@ -15,4 +15,4 @@ jobs:
         with:
           rubocop_version: gemfile
           #rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
-          reporter: github-pr-review # Default is github-pr-check
+          reporter: github-pr-check # Default is github-pr-check

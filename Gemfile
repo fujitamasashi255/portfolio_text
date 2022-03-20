@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "mini_magick"
 gem 'pry-byebug'
 gem 'rails-latex'
+gem 'rubocop', require:false
+gem 'rubocop-rails', require:false

@@ -8,8 +8,12 @@ class QuestionsController < ApplicationController
 
     def create
         @question = Question.new(question_params)
-        @question.save
-        redirect_to question_path(@question)
+        if @question.save
+            redirect_to question_path(@question)
+        else
+            flash.now[:notice]= "作成失敗"
+            render :new
+        end
     end
 
     def edit;end
@@ -57,7 +61,7 @@ class QuestionsController < ApplicationController
     private
 
     def question_params
-      params.require(:question).permit(:content, :answer_file, :picture, :tikz, :tex_log_path)
+      params.require(:question).permit(:id, :content, :answer_file, :picture, :tikz, :tex_log_path)
     end
 
     def set_question

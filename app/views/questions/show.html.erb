@@ -4,51 +4,6 @@
         <%= @question.content %>
     </div>
     <br>
-    <div>
-        <% pdf = MiniMagick::Image.open(ActiveStorage::Blob.service.path_for(@question.answer_file.key)) %>
-        <%#  tmp_files = []
-            page = pdf.pages[0]
-            image = "#{Rails.root}/app/assets/images/1.png"
-            MiniMagick::Tool::Convert.new do |convert|
-                convert << page.path
-                convert.define 'png:color-type=6'
-                convert.quality 1000
-                convert.density 150
-                convert.geometry '1240x1754'
-                #convert.resize("1000x1000")
-                convert.trim
-                convert << image
-            end
-            tmp_files << image
-        %>
-        <% 
-            page = pdf.pages[0]
-            image = "#{Rails.root}/app/assets/images/1.png"
-            MiniMagick::Tool::Convert.new do |convert|
-                convert.density 600
-                convert << page.path
-                convert.define 'png:color-type=6'
-                convert.trim
-                convert << image
-            end
-        %>
-        <%= image_tag "1.png", width: '80%', height: '80%' %>
-        <!--
-        <object data="<%= url_for(@question.answer_file) %>" type="application/pdf" width="400" height="400" position="absolute" ></object>
-        -->
-    </div>
-    <!-- pdfがあれば表示。コンパイルミスの場合はその旨を表示。-->
-    <div>
-        <% if @question.tikz_pdf.attached? %>
-            <!--
-                <object data="<%= url_for(@question.tikz_pdf) %>" type="application/pdf" width="400" height="400" position="absolute" ></object>
-            -->
-            <%= image_tag "test_1.png" %>
-        <% elsif @question.tikz.present? %>
-            <p>コンパイルされていません</p>
-        <% end %>
-    </div>
-    <br>
     <div id="geogebra_base64" data-geogebra-base64="<%= @question.picture %>">
         <div id="ggb-element"></div>
     </div>

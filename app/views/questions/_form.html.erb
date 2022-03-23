@@ -23,24 +23,10 @@
     </div>
   </div>
 </div>
-<div>
-  <%= form_with model: question, url: compile_question_path(question), method: :post, local: false do |f| %>
-    <pre>
-      <%= f.label :tikz %>
-      <!-- <div id="tikz_container"> -->
-        <%= f.text_area :tikz, id: "textarea" %>
-        <div id="background_textarea"></div>
-      <!-- </div> -->
-    </pre>
-    <div>
-      <%= f.submit "コンパイル" %>
-    </div>
-  <% end %>
-  <div id="compile_result"></div>
-</div >
+
 
 <!-- モーダルを表示するボタン -->
-<%= link_to "geogebraを作成する", edit_questions_picture_path(question), id:"open_geogebra" ,class:"btn btn-primary", data: {bs_toggle: "modal", bs_target: "#geogebraModal"} %>
+<%#= link_to "geogebraを作成する", edit_questions_picture_path(question), id:"open_geogebra" ,class:"btn btn-primary", data: {bs_toggle: "modal", bs_target: "#geogebraModal"} %>
 
 <!-- Modal -->
 <div class="modal fade" id="geogebraModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

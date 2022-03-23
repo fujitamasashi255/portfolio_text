@@ -3,18 +3,8 @@ on: [pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:11-alpine
-        ports:
-          - "5432:5432"
-        env:
-          POSTGRES_DB: rails_test
-          POSTGRES_USER: rails
-          POSTGRES_PASSWORD: password
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
     steps:
       # Add or replace dependency steps here
       - name: Checkout code
@@ -38,6 +28,11 @@ jobs:
           cache: 'yarn'
       - name: yarn install
         run: yarn install
+      - name: sqlite3 install
+        run: |
+	        sudo apt install libsqlite3-dev
+          gem install sqlite3 -v '1.4.2' --source 'https://rubygems.org/'
+          dpkg -L libsqlite3-dev
       # Add or replace database setup steps here
       - name: Set up database schema
         run: bin/rails db:schema:load

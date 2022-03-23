@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
     before_action :set_question, only: %i[edit update destroy show compile tex_log]
 
-ddddd
+ええええ
 
     def new
         @question = Question.new()

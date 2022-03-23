@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
         if @question.save
             redirect_to question_path(@question)
         else
-            flash.now[:notice]= "作成失敗"
+            flash.now[:notice]= "作成できません"
             render :new
         end
     end

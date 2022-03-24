@@ -3,6 +3,9 @@ class QuestionsController < ApplicationController
 
 おおおお
 
+
+カカカカか
+
     def new
         @question = Question.new()
         @question.update(tikz:"\\documentclass{jsarticle}\n%\\usepackage{amsmath}\n%\\usepackage{tikz}\n\n\\begin{document}\n\n\\end{document}")

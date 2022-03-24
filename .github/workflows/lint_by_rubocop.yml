@@ -37,6 +37,7 @@ jobs:
         run: bin/rails db:schema:load
       - name: Install chrome
         uses: browser-actions/setup-chrome@latest
+      - name: Install font
         run: apt install fonts-ipafont fonts-ipaexfont
       # Add or replace test runners here
       - name: run Rspec

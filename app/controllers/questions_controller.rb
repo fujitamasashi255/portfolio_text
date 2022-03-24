@@ -1,6 +1,14 @@
 class QuestionsController < ApplicationController
     before_action :set_question, only: %i[edit update destroy show compile tex_log]
 
+おおおお
+
+
+カカカカか
+
+
+ニニに
+
     def new
         @question = Question.new()
         @question.update(tikz:"\\documentclass{jsarticle}\n%\\usepackage{amsmath}\n%\\usepackage{tikz}\n\n\\begin{document}\n\n\\end{document}")
@@ -67,4 +75,8 @@ class QuestionsController < ApplicationController
     def set_question
         @question = Question.find(params[:id])
     end
+
+
+けけけ
+
 end

@@ -40,3 +40,9 @@ jobs:
       # Add or replace test runners here
       - name: run Rspec
         run: bundle exec rspec
+      - name: Archive rspec result screenshots
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: rspec result screenshots
+          path: tmp/screenshots/

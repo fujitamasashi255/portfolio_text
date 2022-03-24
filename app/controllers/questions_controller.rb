@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
 
 おおおお
 
+わわわ
 
 カカカカか
 

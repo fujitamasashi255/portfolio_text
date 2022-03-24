@@ -19,7 +19,7 @@ jobs:
         with:
           rubocop_flags: --config .rubocop.yml
           rubocop_version: gemfile
-          #rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
+          rubocop_extensions: rubocop-rails:gemfile #rubocop-rspec:gemfile
           reporter: github-pr-check # Default is github-pr-check
       - name: Set up yarn and node
         uses: actions/setup-node@v2

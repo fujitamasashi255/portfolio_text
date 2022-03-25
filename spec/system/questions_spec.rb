@@ -13,7 +13,7 @@ RSpec.describe "Questions", type: :system do
     context 'contentが入力されていないとき' do
       it '問題が作成されない' do
         click_button 'Create Question'
-        expect(page).to have_content 'あああ'
+        expect(page).to have_content 'いいい'
       end
     end
   end

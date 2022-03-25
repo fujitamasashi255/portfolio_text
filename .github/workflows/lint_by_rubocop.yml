@@ -17,9 +17,8 @@ jobs:
       - name: rubocop
         uses: reviewdog/action-rubocop@v2
         with:
-          rubocop_flags: --config .rubocop.yml
           rubocop_version: gemfile
-          #rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
+          rubocop_extensions: rubocop-rails:gemfile #rubocop-rspec:gemfile
           reporter: github-pr-check # Default is github-pr-check
       - name: Set up yarn and node
         uses: actions/setup-node@v2
@@ -38,6 +37,14 @@ jobs:
         run: bin/rails db:schema:load
       - name: Install chrome
         uses: browser-actions/setup-chrome@latest
+      - name: Install font
+        run: sudo apt install fonts-ipafont fonts-ipaexfont
       # Add or replace test runners here
       - name: run Rspec
         run: bundle exec rspec
+      - name: Archive rspec result screenshots
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: rspec result screenshots
+          path: tmp/screenshots/
